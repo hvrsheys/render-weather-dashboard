@@ -1,0 +1,23 @@
+{
+  "name": "render-weather-dashboard",
+  "version": "1.0.0",
+  "description": "Simple weather dashboard deployed on Render",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hvrsheys/render-weather-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hvrsheys/render-weather-dashboard/issues"
+  },
+  "homepage": "https://github.com/hvrsheys/render-weather-dashboard#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
