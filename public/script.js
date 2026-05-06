@@ -15,6 +15,8 @@ async function loadLogs() {
   const logs = await response.json();
 
   const table = document.getElementById("logsTable");
+  if (!table) return;
+
   table.innerHTML = "";
 
   logs.forEach((log) => {
@@ -31,13 +33,17 @@ async function loadLogs() {
   });
 }
 
-document.getElementById("saveBtn").addEventListener("click", async () => {
-  await fetch("/api/weather-log", {
-    method: "POST"
-  });
+const saveBtn = document.getElementById("saveBtn");
 
-  await loadLogs();
-});
+if (saveBtn) {
+  saveBtn.addEventListener("click", async () => {
+    await fetch("/api/weather-log", {
+      method: "POST"
+    });
+
+    await loadLogs();
+  });
+}
 
 loadWeather();
 loadLogs();
