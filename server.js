@@ -7,6 +7,7 @@ app.use(express.static("public"));
 
 app.get("/api/weather", (req, res) => {
   res.json({
+    title: process.env.DASHBOARD_TITLE || "Weather Dashboard",
     city: process.env.CITY || "Kuching",
     temperature: "31°C",
     condition: "Partly Cloudy",
